@@ -146,3 +146,6 @@
 [url "git@github.com:"]
     insteadof = github:
 
+[user]
+    name = "Nathan Bellowe"
+    email = "nbellowe@gmail.com"
