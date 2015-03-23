@@ -9,6 +9,7 @@
 *~
 *.sublime-*
 *.d/localhost
+bin/*
 aptitude/cache
 cmus/autosave
 cmus/cache
