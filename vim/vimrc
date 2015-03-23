@@ -1,21 +1,30 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
 "
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+" dotvim : https://github.com/dotphiles/dotvim
 "
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
+" Setup vim and load required plugins before dotvim
+"
+" Authors:
+"   Ben O'Hara <bohara@gmail.com>
+"
 
+" Call dotvim
+source ~/.vim/dotvim.vim
+
+if has("user_commands")
+  set nocompatible
+  filetype off
+  set rtp+=~/.vim/bundle/vundle/
+  call vundle#rc()
+  "let g:vundles=['general', 'git', 'hg', 'programming', 'completion', 'ruby', 'python', 'misc']
+  let g:vundles=['general', 'python', 'programming', 'git']
+  "let g:neocomplcache_enable_at_startup = 1
+  " Load 'vundles'
+  source ~/.vim/vundles.vim
+  " Add extra bundles here...
+  " Bundle 'reponame'
+endif
+
+" Customize to your needs...
 
 " Use the Solarized Dark theme
 set background=dark
@@ -121,3 +130,5 @@ if has("autocmd")
 	" Treat .md files as Markdown
 	autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 endif
+
+
