@@ -14,6 +14,7 @@
 [submodule "zsh/dotzsh"]
 	path = zsh/dotzsh
 	url = https://github.com/nbellowe/dotzsh.git
+
 [submodule "vim/dotvim"]
 	path = vim/dotvim
 	url = https://github.com/nbellowe/dotvim.git

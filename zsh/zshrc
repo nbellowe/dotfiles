@@ -105,9 +105,9 @@ zstyle ':dotzsh:module:ssh:agent' forwarding 'yes'
 
 ### OSX module
 # Add aliases for Applications
-##zstyle ':dotzsh:module:osx' launcher 'yes'
+zstyle ':dotzsh:module:osx' launcher 'yes'
 # Open/Resume temrinal in correct dir
-##zstyle ':dotzsh:module:osx' terminal-resume 'yes'
+zstyle ':dotzsh:module:osx' terminal-resume 'yes'
 
 ### Git module
 # Disable all git aliases
@@ -121,18 +121,14 @@ zstyle ':dotzsh:module:ssh:agent' forwarding 'yes'
 #zstyle ':dotzsh:module:tmux:aliases' tmuxinator 'yes'
 
 ### Syntax Highlighting module
-#zstyle ':dotzsh:module:syntax-highlighting' highlighters 'main' 'brackets' 'pattern' \
-#  'cursor' 'root' \
+zstyle ':dotzsh:module:syntax-highlighting' highlighters 'main' 'brackets' 'pattern' \
+  'cursor' 'root' \
 
 ### Theme module
 # Set default theme to load.
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
-zstyle ':dotzsh:module:theme' theme 'dotphiles'
-### Set custom theme based on hostname or domain
-# zstyle ':dotzsh:module:theme:hostname:your-host-here' theme 'dotphiles' 'soldark' 'magenta'
-# zstyle ':dotzsh:module:theme:hostname:your-other-host-here' theme 'dotphiles' 'soldark' 'violet'
-# zstyle ':dotzsh:module:theme:domain:your-domain-here' theme 'dotphiles' 'soldark' 'orange'
+zstyle ':dotzsh:module:theme' theme 'dotphiles' 'soldark' 'yellow'
 
 ### Load dotzsh
 source "$DOTZSH/init.zsh"
