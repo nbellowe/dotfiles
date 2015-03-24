@@ -129,10 +129,6 @@ zstyle ':dotzsh:module:syntax-highlighting' highlighters 'main' 'brackets' 'patt
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
 zstyle ':dotzsh:module:theme' theme 'dotphiles' 'soldark' 'yellow'
-### Set custom theme based on hostname or domain
-# zstyle ':dotzsh:module:theme:hostname:your-host-here' theme 'dotphiles' 'soldark' 'magenta'
-# zstyle ':dotzsh:module:theme:hostname:your-other-host-here' theme 'dotphiles' 'soldark' 'violet'
-# zstyle ':dotzsh:module:theme:domain:your-domain-here' theme 'dotphiles' 'soldark' 'orange'
 
 ### Load dotzsh
 source "$DOTZSH/init.zsh"
