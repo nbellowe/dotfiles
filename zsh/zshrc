@@ -133,3 +133,7 @@ source "$DOTZSH/init.zsh"
 
 ### Customize to your needs...
 source ~/.aliases
+
+#vimpager
+export PAGER=/usr/local/bin/vimpager
+alias less=$PAGER
