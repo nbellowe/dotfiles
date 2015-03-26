@@ -62,6 +62,8 @@
     tool = vimdiff
 
 [alias]
+    resetorigin = !git fetch origin && git reset --hard origin/master && git clean -f -d
+
     # branch
     b  = branch
     bc = checkout -b
