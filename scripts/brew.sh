@@ -104,3 +104,4 @@ brew install markdown
 # Remove outdated versions from the cellar.
 brew cleanup
 
+brew install uncrustify

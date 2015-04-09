@@ -151,3 +151,7 @@
 [user]
     name = "Nathan Bellowe"
     email = "nbellowe@gmail.com"
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
