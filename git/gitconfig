@@ -62,6 +62,8 @@
     tool = vimdiff
 
 [alias]
+    resetorigin = !git fetch origin && git reset --hard origin/master && git clean -f -d
+
     # branch
     b  = branch
     bc = checkout -b
@@ -149,3 +151,7 @@
 [user]
     name = "Nathan Bellowe"
     email = "nbellowe@gmail.com"
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true

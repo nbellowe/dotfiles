@@ -51,11 +51,11 @@ zstyle ':dotzsh:load' dzmodule \
 'terminal' \
 'theme' \
 'trap' \
-'vagrant' \
-'wakeonlan' \
-'yum' \
 'zaw'
-
+#not z
+#'vagrant' \
+#'wakeonlan' \
+#'yum' \
 ### Global settings
 # Color output (auto set to 'no' on dumb terminals).
 zstyle ':dotzsh:module:*' color 'yes'
@@ -66,7 +66,7 @@ zstyle ':dotzsh:module:*' case-sensitive 'no'
 
 ### Environment module
 # Set which PAGER to use less or more
-##zstyle ':dotzsh:module:environment' pager 'less'
+zstyle ':dotzsh:module:environment' pager 'vimpager'
 # Enable mouse scrolling in less, add the following to *zshrc*
 ##zstyle ':dotzsh:module:environment:pager:less' mousescroll 'false'
 
@@ -76,8 +76,6 @@ zstyle ':dotzsh:module:terminal' auto-title 'yes'
 
 ### Editor module
 # Set the key mapping style to 'emacs' or 'vi'.
-zstyle ':dotzsh:module:editor' keymap 'emacs'
-# Set EDITOR to 'emacs' or 'vi'.
 zstyle ':dotzsh:module:editor' editor 'vi'
 # Auto convert .... to ../..
 #zstyle ':dotzsh:module:editor' dot-expansion 'yes'
@@ -92,7 +90,7 @@ zstyle ':dotzsh:module:editor' editor 'vi'
 
 ### Completion module
 # Expand global aliases automatically
-#zstyle ':dotzsh:module:completion' expand-global-aliases 'yes'
+zstyle ':dotzsh:module:completion' expand-global-aliases 'yes'
 
 ### SSH module
 zstyle ':dotzsh:module:ssh:agent' forwarding 'yes'
@@ -134,5 +132,8 @@ zstyle ':dotzsh:module:theme' theme 'dotphiles' 'soldark' 'yellow'
 source "$DOTZSH/init.zsh"
 
 ### Customize to your needs...
-export PATH=$PATH:"/Applications/VMware\ Fusion.app/Contents/Library"
-source .aliases
+source ~/.aliases
+
+#vimpager
+export PAGER=/usr/local/bin/vimpager
+alias less=$PAGER

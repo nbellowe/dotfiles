@@ -25,3 +25,5 @@ endif
 
 " Customize to your needs...
 
+colorscheme desert
+
