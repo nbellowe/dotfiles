@@ -126,7 +126,7 @@ zstyle ':dotzsh:module:syntax-highlighting' highlighters 'main' 'brackets' 'patt
 # Set default theme to load.
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
-zstyle ':dotzsh:module:theme' theme 'dotphiles' 'soldark' 'yellow'
+zstyle ':dotzsh:module:theme' theme 'steeef'
 
 ### Load dotzsh
 source "$DOTZSH/init.zsh"
@@ -137,3 +137,6 @@ source ~/.aliases
 #vimpager
 export PAGER=/usr/local/bin/vimpager
 alias less=$PAGER
+export MONO_GAC_PREFIX="/usr/local"
+source kvm.sh
+source dnvm.sh
