@@ -137,8 +137,9 @@ source ~/.aliases
 #vimpager
 export PAGER=/usr/local/bin/vimpager
 alias less=$PAGER
-if [ "$OS" == "Darwin"]]; then
+if [[ "$OS" == "Darwin" ]]; then
   export MONO_GAC_PREFIX="/usr/local"
   source kvm.sh
   source dnvm.sh
-fi;
+fi
+
