@@ -6,9 +6,10 @@
 #
 # Authors:
 #   Ben O'Hara <bohara@gmail.com>
+#   Nathan Bellowe <nbellowe@gmail.com>
 #
 
-GITHUB_USERNAME=$1
+GITHUB_USERNAME="nbellowe"
 DOTPHILES=$2
 
 usage()
@@ -17,12 +18,6 @@ usage()
   echo "Usage: $0 github-username [.dotphiles]"
   echo
 }
-
-if [[ -z "$GITHUB_USERNAME" ]]; then
-  echo "Need github username!"
-  usage
-  exit 1
-fi
 
 if [[ -z "$DOTPHILES" ]]; then
   DOTPHILES=".dotphiles"

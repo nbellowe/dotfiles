@@ -1,10 +1,5 @@
 #
-# dotphiles : https://github.com/dotphiles/dotphiles
-#
-# brews to be install from homebrew
-#
-# Authors:
-#    Ben O'Hara <bohara@gmail.com>
+# Nathan Bellowe
 #
 
 #aacgain
@@ -32,7 +27,82 @@
 #tcptraceroute
 #tmux
 #vnstat
-#wget
 #xz
-#zsh
+zsh
 
+
+# Install some other useful utilities like `sponge`.
+moreutils
+# Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
+findutils
+# Install GNU `sed`, overwriting the built-in `sed`.
+gnu-sed --with-default-names
+# Install Bash 4.
+# Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
+# running `chsh`.
+bash
+bash-completion
+
+# Install `wget` with IRI support.
+wget --with-iri
+
+# Install more recent versions of some OS X tools.
+vim --override-system-vi
+homebrew/dupes/grep
+homebrew/dupes/openssh
+homebrew/dupes/screen
+homebrew/php/php55 --with-gmp
+
+# Install font tools.
+brew tap bramstein/fonttools
+sfnt2woff
+sfnt2woff-zopfli
+woff2
+
+# Install some CTF tools; see https://github.com/ctfs/write-ups.
+bfg
+binutils
+binwalk
+cifer
+dex2jar
+dns2tcp
+fcrackzip
+foremost
+hashpump
+hydra
+john
+knock
+nmap
+pngcheck
+socat
+sqlmap
+tcpflow
+tcpreplay
+tcptrace
+ucspi-tcp # `tcpserver` etc.
+xpdf
+xz
+
+# Install other useful binaries.
+ack
+#exiv2
+git
+imagemagick --with-webp
+lua
+lynx
+p7zip
+pigz
+pv
+rename
+rhino
+speedtest_cli
+tree
+webkit2png
+zopfli
+
+# Install Node.js. Note: this installs `npm` too, using the recommended
+# installation method.
+node
+
+# markdown install
+markdown

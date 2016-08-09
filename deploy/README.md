@@ -1,7 +1,7 @@
 deploy
 ======
 
-Scripts to deploy a new machine
+Scripts to deploy my machines…
 
 osx
 ---
