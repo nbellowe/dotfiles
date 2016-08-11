@@ -30,8 +30,8 @@ read name
 
 # Set computer name (as done via System Preferences → Sharing)
 sudo scutil --set ComputerName "$name"
-sudo scutil --set HostName "**your-hostname**"
-sudo scutil --set LocalHostName "**your-hostname**"
+sudo scutil --set HostName "host"
+sudo scutil --set LocalHostName "host"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string $name
 
 # Set standby delay to 24 hours (default is 1 hour)
@@ -71,7 +71,6 @@ defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
 # (Uncomment if you’re on an older Mac that messes up the animation)
 # defaults write NSGlobalDomain NSScrollAnimationEnabled -bool false
 
-exit 0
 #I did use to use these
 
   # Disable opening and closing window animations
@@ -234,10 +233,10 @@ defaults write com.apple.screencapture type -string "png"
 defaults write com.apple.screencapture disable-shadow -bool true
 
 # Enable subpixel font rendering on non-Apple LCDs
-defaults write NSGlobalDomain AppleFontSmoothing -int 2
+#!!!defaults write NSGlobalDomain AppleFontSmoothing -int 2
 
 # Enable HiDPI display modes (requires restart)
-sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
+#!!!sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
 
 ###############################################################################
 # Finder                                                                      #
