@@ -8,13 +8,13 @@ osx
 
 Setup OSX with sensible default options
 
-### packages/macports
-
-Install required packages using macports
-
 ### packages/brew
 
 Install required packages using homebrew
+
+### packages/brewcasks
+
+Install full apps using homebrew casks
 
 linux
 -----

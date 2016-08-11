@@ -25,5 +25,15 @@ if [[ -f packages/homebrew ]]; then
   done
 fi
 
+if [[ -f packages/homebrewcasks ]]; then
+  exec<packages/homebrewcasks
+  while read line
+  do
+    if [[ ! "$line" =~ (^#|^$) ]]; then
+      brew cask install $line
+    fi
+  done
+fi
+
 # Remove outdated versions from the cellar. (happened once)
 brew cleanup

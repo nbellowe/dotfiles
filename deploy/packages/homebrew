@@ -2,32 +2,6 @@
 # Nathan Bellowe
 #
 
-#aacgain
-#autoconf
-#automake
-#bash
-#coreutils
-#ctags
-#gdbm
-#grc
-#htop-osx
-#iftop
-#ipcalc
-#libevent
-#libnet
-#libtool
-#mtr
-#ncdu
-#nmap
-#pcre
-#pkg-config
-#pv
-#readline
-#reattach-to-user-namespace
-#tcptraceroute
-#tmux
-#vnstat
-#xz
 zsh
 
 
@@ -51,37 +25,12 @@ vim --override-system-vi
 homebrew/dupes/grep
 homebrew/dupes/openssh
 homebrew/dupes/screen
-homebrew/php/php55 --with-gmp
 
 # Install font tools.
-brew tap bramstein/fonttools
-sfnt2woff
-sfnt2woff-zopfli
-woff2
-
-# Install some CTF tools; see https://github.com/ctfs/write-ups.
-bfg
-binutils
-binwalk
-cifer
-dex2jar
-dns2tcp
-fcrackzip
-foremost
-hashpump
-hydra
-john
-knock
-nmap
-pngcheck
-socat
-sqlmap
-tcpflow
-tcpreplay
-tcptrace
-ucspi-tcp # `tcpserver` etc.
-xpdf
-xz
+#brew tap bramstein/fonttools
+#sfnt2woff
+#sfnt2woff-zopfli
+#woff2
 
 # Install other useful binaries.
 ack
@@ -106,3 +55,6 @@ node
 
 # markdown install
 markdown
+
+
+dark-mode
