@@ -25,12 +25,11 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # General UI/UX                                                               #
 ###############################################################################
 
-
-echo -n “Computer name?: "
+echo -n "Computer name?: "
 read name
 
 # Set computer name (as done via System Preferences → Sharing)
-sudo scutil --set ComputerName $name
+sudo scutil --set ComputerName "$name"
 sudo scutil --set HostName "**your-hostname**"
 sudo scutil --set LocalHostName "**your-hostname**"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string $name
@@ -45,17 +44,18 @@ sudo nvram SystemAudioVolume=" "
 defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
 
 # Menu bar: hide the Time Machine, Volume, User, and Bluetooth icons
-for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
-    defaults write "${domain}" dontAutoLoad -array \
-        "/System/Library/CoreServices/Menu Extras/TimeMachine.menu" \
-        "/System/Library/CoreServices/Menu Extras/Volume.menu" \
-        "/System/Library/CoreServices/Menu Extras/User.menu"
-done
-defaults write com.apple.systemuiserver menuExtras -array \
-    "/System/Library/CoreServices/Menu Extras/Bluetooth.menu" \
-    "/System/Library/CoreServices/Menu Extras/AirPort.menu" \
-    "/System/Library/CoreServices/Menu Extras/Battery.menu" \
-    "/System/Library/CoreServices/Menu Extras/Clock.menu"
+# for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
+#    defaults write "${domain}" dontAutoLoad -array \
+#        "/System/Library/CoreServices/Menu Extras/TimeMachine.menu" \
+#        "/System/Library/CoreServices/Menu Extras/Volume.menu" \
+#        "/System/Library/CoreServices/Menu Extras/User.menu"
+#done
+
+#defaults write com.apple.systemuiserver menuExtras -array \
+#    "/System/Library/CoreServices/Menu Extras/Bluetooth.menu" \
+#    "/System/Library/CoreServices/Menu Extras/AirPort.menu" \
+#    "/System/Library/CoreServices/Menu Extras/Battery.menu" \
+#    "/System/Library/CoreServices/Menu Extras/Clock.menu"
 
 # Set highlight color to green
 defaults write NSGlobalDomain AppleHighlightColor -string "0.764700 0.976500 0.568600"
@@ -69,9 +69,9 @@ defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
 
 # Disable smooth scrolling
 # (Uncomment if you’re on an older Mac that messes up the animation)
-#defaults write NSGlobalDomain NSScrollAnimationEnabled -bool false
+# defaults write NSGlobalDomain NSScrollAnimationEnabled -bool false
 
-
+exit 0
 #I did use to use these
 
   # Disable opening and closing window animations
@@ -91,7 +91,7 @@ defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 # Automatically quit printer app once the print jobs complete
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 
-# Disable the “Are you sure you want to open this application?” dialog
+# Disable the "Are you sure you want to open this application?" dialog
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
 # Display ASCII control characters using caret notation in standard text views
@@ -172,11 +172,11 @@ defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
   # defaults -currentHost write NSGlobalDomain com.apple.trackpad.trackpadCornerClickBehavior -int 1
   #defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
 
-# Disable “natural” (Lion-style) scrolling
+# Disable "natural" (Lion-style) scrolling
 # defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 
 # Increase sound quality for Bluetooth headphones/headsets
-defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
+# defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min \(editable\)" -int 40
 
 # Enable full keyboard access for all controls
 # (e.g. enable Tab in modal dialogs)
@@ -202,9 +202,9 @@ defaults write com.apple.BezelServices kDimTime -int 300
 # Set language and text formats
 # Note: if you’re in the US, replace `EUR` with `USD`, `Centimeters` with
 # `Inches`, `en_GB` with `en_US`, and `true` with `false`.
-defaults write NSGlobalDomain AppleLanguages -array "en" “us”
-defaults write NSGlobalDomain AppleLocale -string "en_US@currency=USD”
-defaults write NSGlobalDomain AppleMeasurementUnits -string “Inches”
+defaults write NSGlobalDomain AppleLanguages -array "en" "us"
+defaults write NSGlobalDomain AppleLocale -string "en_US@currency=USD"
+defaults write NSGlobalDomain AppleMeasurementUnits -string "Inches"
 defaults write NSGlobalDomain AppleMetricUnits -bool false
 
 # Set the timezone; see `systemsetup -listtimezones` for other values
@@ -350,7 +350,7 @@ chflags nohidden ~/Library
 [ -e "${file}" ] && mv -f "${file}" "${file}.bak"
 
 # Expand the following File Info panes:
-# “General”, “Open with”, and “Sharing & Permissions”
+# "General", "Open with", and "Sharing & Permissions"
 defaults write com.apple.finder FXInfoPanesExpanded -dict \
     General -bool true \
     OpenWith -bool true \
@@ -478,7 +478,7 @@ defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
 defaults write com.apple.Safari FindOnPageMatchesWordStartsOnly -bool false
 
 # Remove useless icons from Safari’s bookmarks bar
-defaults write com.apple.Safari ProxiesInBookmarksBar "()"
+defaults write com.apple.Safari ProxiesInBookmarksBar "\(\)"
 
 # Enable the Develop menu and the Web Inspector in Safari
 defaults write com.apple.Safari IncludeDevelopMenu -bool true
@@ -562,7 +562,7 @@ defaults write com.apple.terminal StringEncodings -array 4
 #defaults write com.apple.terminal "Default Window Settings" -string "Mathias"
 #defaults write com.apple.terminal "Startup Window Settings" -string "Mathias"
 
-# Enable “focus follows mouse” for Terminal.app and all X11 apps
+# Enable "focus follows mouse" for Terminal.app and all X11 apps
 # i.e. hover over a window and start typing in it without clicking first
 #defaults write com.apple.terminal FocusFollowsMouse -bool true
 #defaults write org.x.X11 wm_ffm -bool true
@@ -727,33 +727,7 @@ fi
 # Homebrew                                                                    #
 ###############################################################################
 
-if [[! -x "$(command -v brew)" ]]; then 
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-fi
-
-# Make sure we’re using the latest Homebrew.
-brew update
-
-# Upgrade any already-installed formulae.
-brew upgrade
-
-#install these manually…
-# Install GNU core utilities (those that come with OS X are outdated).
-brew install coreutils
-sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
-
-if [[ -f $DIR/packages/homebrew ]]; then
-  exec<$DIR/packages/homebrew
-  while read line
-  do
-    if [[ ! "$line" =~ (^#|^$) ]]; then
-      brew install $line
-    fi
-  done
-fi
-
-# Remove outdated versions from the cellar. (happened once)
-brew cleanup
+sh ./brew.sh
 
 ###############################################################################
 # Kill affected applications                                                  #
