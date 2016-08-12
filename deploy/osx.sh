@@ -660,6 +660,7 @@ defaults write org.m0k.transmission WarningDonate -bool false
 # Hide the legal disclaimer
 defaults write org.m0k.transmission WarningLegal -bool false
 
+sh ./link.sh
 ###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
