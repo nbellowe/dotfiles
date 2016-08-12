@@ -29,4 +29,3 @@ if [[ -f $DIR/packages/apt ]]; then
   done
   sudo apt-get install $packages
 fi
-
