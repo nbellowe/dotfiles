@@ -1,13 +1,4 @@
-"
-" dotvim : https://github.com/dotphiles/dotvim
-"
-" Setup vim and load required plugins before dotvim
-"
-" Authors:
-"   Ben O'Hara <bohara@gmail.com>
-"
-
-" Call dotvim
+# TODO!!!
 source ~/.vim/dotvim.vim
 
 if has("user_commands")
@@ -26,4 +17,3 @@ endif
 " Customize to your needs...
 
 colorscheme desert
-

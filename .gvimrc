@@ -8,7 +8,7 @@
 "
 
 " Logical size of GVim window
-set lines=35 columns=99
+set lines=35 columns=95
 
 " Don't display the menu or toolbar. Just the screen.
 set guioptions-=m
@@ -20,4 +20,3 @@ if has('mac')
 elseif has('unix')
   let &guifont="DejaVu Sans Mono 10"
 endif
-

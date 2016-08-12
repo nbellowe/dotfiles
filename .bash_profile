@@ -4,7 +4,7 @@ export PATH="$HOME/bin:$PATH";
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
+for file in ~/.{bash_prompt,exports,aliases}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
@@ -51,6 +51,3 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 if [ -d "/Applications/VMware Fusion.app/Contents/Library" ]; then
     export PATH=$PATH:"/Applications/VMware Fusion.app/Contents/Library"
 fi
-
-export PATH=/Users/nbellowe/bin/Sencha/Cmd/4.0.5.87:$PATH
-export SENCHA_CMD_3_0_0="/Users/nbellowe/bin/Sencha/Cmd/4.0.5.87"

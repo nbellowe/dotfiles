@@ -1,17 +1,9 @@
-#
-# dotphiles : https://github.com/dotphiles/dotphiles
-#
-# Git configuration.
-#
-# Authors:
-#   Ben O'Hara <bohara@gmail.com>
-#
+#   Nathan Bellowe <nbellowe@gmail.com>
 
 # Global Config
 [user]
-    #name = "**Your Name**"
-    #email = "**Your Email**"
-    #signingkey = **Your GPG ID**
+    name = "Nathan Bellowe"
+    email = "nbellowe@gmail.com"
 
 [branch "master"]
     remote = origin
@@ -148,9 +140,6 @@
 [url "git@github.com:"]
     insteadof = github:
 
-[user]
-    name = "Nathan Bellowe"
-    email = "nbellowe@gmail.com"
 [filter "hawser"]
 	clean = git hawser clean %f
 	smudge = git hawser smudge %f

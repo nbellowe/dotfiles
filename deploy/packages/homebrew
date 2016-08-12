@@ -56,5 +56,7 @@ node
 # markdown install
 markdown
 
+#vimpager
+vimpager
 
 dark-mode

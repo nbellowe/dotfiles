@@ -97,7 +97,7 @@ alias pumpitup="osascript -e 'set volume 7'"
 
 # Kill all the tabs in Chrome to free up memory
 # [C] explained: http://www.commandlinefu.com/commands/view/402/exclude-grep-from-your-grepped-output-of-ps-alias-included-in-description
-alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"
+# alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"
 
 # Lock the screen (when going AFK)
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
@@ -105,33 +105,7 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
 alias ccat="pygmentize -g -O style=colorful,linenos=1"
-alias atweb="cd /Volumes/Jenova/atweb/Merge/AutoTagWeb/"
-alias ubuntu-ssh="ssh -t nbellowe@ubuntu \"cd sync ; zsh\""
 
-export vm="/Users/nbellowe/Documents/Virtual\ Machines.localized/Ubuntu\ 64-bit\ 14.04.1.vmwarevm/Ubuntu\ 64-bit\ 14.04.1.vmx"
-export winvm="/Users/nbellowe/Documents/Virtual\ Machines.localized/Windows\ 8\ x64.vmwarevm/Windows\ 8\ x64.vmx"
-
-alias mountjenova="mount_smbfs //guest@windows-vm/Jenova ~/share/windows/Jenova"
-alias mountusers="mount_smbfs //guest@windows-vm/Users ~/share/windows/Users"
-alias mountubuntu="mount_smbfs //nbellowe:@ubuntu/sync ~/share/ubuntu"
-
-alias ubuntu-start="vmrun start $vm"
-alias windows-start="vmrun start $winvm"
-
-alias ubuntu-sync-ubuntu-to-osx="rsync -avz ubuntu:sync/ ~/sync/"
-alias ubuntu-sync-osx-to-ubuntu="rsync -avz ~/sync/ ubuntu:sync/"
-
-alias mountjenova="mount_smbfs //guest@windows-vm/Jenova ~/share/windows/Jenova"
-alias mountusers="mount_smbfs //guest@windows-vm/Users ~/share/windows/Users"
-alias mountubuntu="mount_smbfs //nbellowe:@ubuntu/sync ~/share/ubuntu"
-
-won(){windows-start; mountjenova; mountusers}
-uon(){ubuntu-start; mountubuntu}
-
-alias ussh="ubuntu-ssh"
-alias utome="ubuntu-sync-ubuntu-to-osx"
-alias umetou="ubuntu-sync-osx-to-ubuntu"
 mdview(){markdown $1 | lynx -stdin}
-alias mdedit="open -a MacDown"
 alias rd="rm -d"
 alias rmf="rm -rf"

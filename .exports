@@ -1,5 +1,5 @@
-# Make vim the default editor.
-export EDITOR='vim';
+# Make atom the default editor.
+export EDITOR='atom';
 
 # Increase Bash history size. Allow 32³ entries; the default is 500.
 export HISTSIZE='32768';
@@ -15,7 +15,7 @@ export LC_ALL='en_US.UTF-8';
 export LESS_TERMCAP_md="${yellow}";
 
 export MANPAGER="vimpager"
-export PAGER=/usr/local/bin/vimpager
+export PAGER="vimpager"
 alias less=$PAGER
 alias zless=$PAGER
 
