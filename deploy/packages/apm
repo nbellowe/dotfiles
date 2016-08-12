@@ -14,8 +14,6 @@ linter
 auto-detect-indentation
 atom-beautify
 linter-gcc
-linter-json
-linter-jsonXXXXX
 linter-tidy
 linter-jsonlint
 linter-pylint

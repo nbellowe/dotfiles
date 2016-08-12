@@ -109,3 +109,7 @@ alias ccat="pygmentize -g -O style=colorful,linenos=1"
 mdview(){markdown $1 | lynx -stdin}
 alias rd="rm -d"
 alias rmf="rm -rf"
+
+#vimpager
+export PAGER=/usr/local/bin/vimpager
+alias less=$PAGER

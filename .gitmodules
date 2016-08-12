@@ -1,0 +1,6 @@
+[submodule "zpresto"]
+	path = zpresto
+	url = https://github.com/nbellowe/prezto.git
+[submodule "prezto"]
+	path = prezto
+	url = git@github.com:nbellowe/prezto.git
