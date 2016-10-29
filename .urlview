@@ -1,11 +1,1 @@
-#
-# dotphiles : https://github.com/dotphiles/dotphiles
-#
-# urlview
-#
-# Authors:
-#   Ben O'Hara <bohara@gmail.com>
-#
-
 COMMAND open %s
-

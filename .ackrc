@@ -1,11 +1,4 @@
-#
-# dotphiles : https://github.com/dotphiles/dotphiles
-#
 # Setup ack
-#
-# Authors:
-#   Ben O'Hara <bohara@gmail.com>
-#
 
 # Flush output immediately, even when piped
 --flush
@@ -41,4 +34,3 @@ rdoc=.rdoc
 --actionscript
 --objc
 --ignore-dir=.idea
-

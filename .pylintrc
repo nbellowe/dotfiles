@@ -1,11 +1,4 @@
-#
-# dotphiles : https://github.com/dotphiles/dotphiles
-#
 # Setup pylint
-#
-# Authors:
-#   Ben O'Hara <bohara@gmail.com>
-#
 
 [MESSAGES CONTROL]
 # Brain-dead errors regarding standard language features
@@ -53,4 +46,3 @@ files-output=no
 
 # Tells whether to display a full report or only the messages
 reports=no
-

@@ -1,11 +1,4 @@
-"
-" dotvim : https://github.com/dotphiles/dotvim
-"
 " gvimrc config
-"
-" Authors:
-"   Ben O'Hara <bohara@gmail.com>
-"
 
 " Logical size of GVim window
 set lines=35 columns=95

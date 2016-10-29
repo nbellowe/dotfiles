@@ -1,11 +1,4 @@
-#
-# dotphiles : https://github.com/dotphiles/dotiles
-#
 # Make python shell usable
-#
-# Authors:
-#   Ben O'Hara <bohara@gmail.com>
-#
 
 $include /etc/inputrc
 
@@ -52,4 +45,3 @@ $endif
 # IPython needs this to appear at the bottom of the
 # file for clear-screen to work
 set keymap vi
-
