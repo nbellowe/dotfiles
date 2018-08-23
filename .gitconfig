@@ -3,7 +3,7 @@
 # Global Config
 [user]
     name = "Nathan Bellowe"
-    email = "nbellowe@gmail.com"
+    email = "nathan.bellowe@thetradedesk.com"
 
 [branch "master"]
     remote = origin

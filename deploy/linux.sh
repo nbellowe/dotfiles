@@ -27,5 +27,10 @@ if [[ -f $DIR/packages/apt ]]; then
       packages="$packages $line"
     fi
   done
-  sudo apt-get install $packages
+  echo "sudo apt-get install $packages -y"
+  sudo apt-get install $packages -y
 fi
+
+git clone git://github.com/rkitover/vimpager ~/vimpager
+cd ~/vimpager
+sudo make install
