@@ -14,9 +14,7 @@ export LC_ALL='en_US.UTF-8';
 # Highlight section titles in manual pages.
 export LESS_TERMCAP_md="${yellow}";
 
-export MANPAGER="vimpager"
-export PAGER="vimpager"
-
 if [[ "$OSTYPE" == darwin* ]]; then
   export PATH=$PATH:"/Applications/VMware\ Fusion.app/Contents/Library"
+  export PATH="$PATH:$HOME/Library/Application Support/JetBrains/Toolbox/scripts"
 fi

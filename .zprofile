@@ -72,3 +72,5 @@ if [[ ! -d "$TMPDIR" ]]; then
 fi
 
 TMPPREFIX="${TMPDIR%/}/zsh"
+[ -f ~/.secrets ] && source ~/.secrets
+[ -f ~/.work ] && source ~/.work

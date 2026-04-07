@@ -14,6 +14,7 @@ alias week='date +%V'
 alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
 
 if [[ "$OSTYPE" == darwin* ]]; then
+	alias dotnet3=/usr/local/share/dotnet/x64/dotnet --list-sdks
 	# Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
 	alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update'
 
@@ -108,11 +109,7 @@ mdview(){ markdown $1 | lynx -stdin; }
 alias rd="rm -d"
 alias rmf="rm -rf"
 
-#vimpager
-export PAGER=/usr/local/bin/vimpager
-alias less=$PAGER
 alias serve="python -m SimpleHTTPServer 8000"
 alias s=serve
 
-alias less=$PAGER
-alias zless=$PAGER
+alias k="kubectl"
